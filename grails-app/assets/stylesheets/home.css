@@ -1,0 +1,526 @@
+.bg-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-image: url("https://i.imgur.com/VeLU01i.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+}
+
+.barTop {
+    position: fixed;
+    z-index: 11;
+    width: 100%;
+    height: 42px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.content {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+/*Login*/
+#login {
+    align-content: center;
+    margin-left: calc(50% - 200px);
+    margin-top: 30%;
+    width: 400px;
+    background-color: transparent;
+}
+
+#login input {
+    color: black;
+    text-decoration: underline dotted rgba(210, 248, 210, 0.6);
+    height: 100px;
+    font-size: 300%;
+    margin-left: 5%;
+    outline: none;
+    width: 400px;
+    border: none;
+    background-color: rgba(210, 248, 210, 0.4);
+    border-radius: 40px;
+}
+
+#login input:hover {
+    color: white;
+    border-radius: 40px;
+}
+
+.fa-spotify {
+    font-size: 300%;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 2%;
+}
+
+/*Spotify Controls*/
+.spotifyControls {
+    position: fixed;
+    z-index: 99;
+    top: 0.3%;
+    left: calc(51% - 80px);
+    width: 210px;
+}
+
+.spotifyControls button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 250%;
+    outline: none;
+    opacity: 0.4;
+}
+
+.spotifyControls button:hover {
+    opacity: 1;
+}
+
+.spotifyControls button:active {
+    color: rosybrown;
+}
+
+.spotifyControls #spotifyNextTrack {
+    float: right;
+}
+
+.spotifyControls #spotifyPrevTrack {
+    margin-right: 7%;
+    float: left;
+}
+
+.spotifyControls #spotifyShuffle {
+    float: right;
+    font-size: 230%;
+}
+
+/*Slider*/
+/* The slider itself */
+.slider {
+    margin-top: 1px;
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 8px; /* Specified height */
+    border-radius: 5px;
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 8px; /* Slider handle height */
+    border-radius: 3px;
+    background: rosybrown;
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    border-radius: 5px;
+    background: rosybrown;
+    cursor: pointer; /* Cursor on hover */
+}
+
+.trackInfo {
+    position: fixed;
+    z-index: 14;
+    right: 0;
+    top: 0.5%;
+    height: 30px;
+    font-size: 90%;
+    margin-right: 1%;
+}
+
+.trackInfo h1 {
+    margin: 0;
+    font-weight: normal;
+    color: rgba(255, 255, 255, 1);
+}
+
+.trackInfo h2 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 80%;
+    color: rgba(255, 255, 255, 1);
+}
+
+#albumImageDiv {
+    position: fixed;
+    left: calc(51% - 320px);
+    top: calc(50% - 320px);
+    transition: top 0.5s linear;
+}
+
+.albumImage img {
+    height: 640px;
+    width: 640px;
+    border-radius: 90%;
+    border: 5px dotted rgba(255, 255, 255, 0.1);
+    opacity: 1;
+}
+
+.animateImg {
+    animation: imgBorderAnimation 0.6s infinite;
+}
+
+@keyframes imgBorderAnimation {
+    50% {
+        border: 6.5px dotted rgba(255, 255, 255, 0.4);
+    }
+}
+
+/*Search*/
+.searchBoxContainer {
+    position: fixed;
+    z-index: 20;
+    top: 0.4%;
+    left: 8%;
+}
+
+.searchBox {
+    width: 400px;
+    text-align: center;
+    border-radius: 40px;
+    background-color: rgba(34, 34, 34, 0.20);
+}
+
+#searchBox1 {
+    height: 32px;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+#searchBox1::placeholder {
+    color: white;
+    opacity: 0.6;
+}
+
+#searchBox1:focus {
+    background-color: rgba(34, 34, 34, 0.40);
+}
+
+.searchBox #searchButton {
+    position: absolute;
+    z-index: 21;
+    top: 0;
+    right: 0;
+    border-radius: 40px;
+    background-color: inherit;
+    height: 32px;
+    width: 32px;
+    font-size: 24px;
+    border: 2px solid white;
+    opacity: 0.5;
+    color: white;
+    outline: none;
+}
+
+#searchButton:hover {
+    border: 2px solid rosybrown;
+    opacity: 1;
+    font-size: 25px;
+}
+
+/*Icons*/
+.fa-chevron-circle-down {
+    font-size: 200%;
+}
+
+/*Images*/
+.imageContainer {
+    z-index: 10;
+    position: relative;
+    top: 22%;
+    width: 90%;
+    left: 5%;
+}
+
+.imageContainer img {
+    height: 300px;
+    width: 300px;
+}
+
+/*Search results overlay*/
+.topOverlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Sit on top */
+    left: 0;
+    top: 42px;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.3); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.topOverlay-content {
+    position: relative;
+    width: 100vw;
+}
+
+.topOverlay .closebtn {
+    z-index: 201;
+    position: absolute;
+    right: 1%;
+    color: white;
+    opacity: 0.5;
+}
+
+.topOverlay .closebtn:hover {
+    opacity: 1;
+    cursor:pointer;
+}
+
+.topOverlay .backbtn {
+    z-index: 201;
+    position: absolute;
+    right: 4%;
+    color: white;
+    opacity: 0.5;
+    font-size: 25px;
+}
+
+.topOverlay .backbtn:hover {
+    opacity: 1;
+    cursor:pointer;
+}
+
+.resultsContainer {
+    display: inline-grid;
+    font-size: 21px;
+    color: white;
+    margin-top: 45px;
+    margin-left: 1%;
+    width: 31%;
+    overflow: hidden;
+}
+
+.resultsContainer h2 {
+    opacity: 0.8;
+    margin: 0;
+    margin-top: 10px;
+}
+
+#searchTrackResults {
+    font-size: 19px;
+    margin-right: 1.5%;
+    width: 36%;
+}
+
+#searchTrackResults img {
+    height: 50px;
+    width: 50px;
+    border-radius: 60px;
+    margin-right: 5px;
+}
+
+#searchArtistResults {
+    width: 22%;
+    font-size: 20px;
+}
+
+#searchAlbumResults {
+    font-size: 18px;
+    width: 36%;
+    margin-left: 2%;
+}
+
+.searchResultImg {
+    height: 55px;
+    width: 55px;
+    border-radius: 40px;
+    margin-right: 15px;
+}
+
+.tracksAlbumImage {
+    height: 120px;
+    width: 120px;
+    border-radius: 20px;
+    left:0;
+}
+
+/*Left Nav*/
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Sit on top */
+    left: 0;
+    top: 42px;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.3); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+.overlayPlaylistTracks {
+    height: 98%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 200; /* Sit on top */
+    left: 0;
+    top: 42px;
+    background-color: rgb(0, 0, 0); /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.3); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 5%;
+    width: 100%;
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    color: white;
+}
+
+.overlay-content h1, h2 {
+    opacity: 0.7;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.overlay-content h1:hover, h2:hover {
+    opacity: 1;
+}
+
+.playlistContainerTitle {
+    top: 0;
+    left: 0;
+    font-size: 18px;
+}
+
+.playlistContainer {
+    margin-top: 50px;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: white;
+    opacity: 0.7;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    opacity: 1;
+}
+
+.overlay .backbtn {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    color: white;
+    opacity: 0.5;
+}
+
+.overlay .fa-arrow-left, .fa-times-circle {
+    font-size: 25px;
+}
+
+.overlay .fa-arrow-left:hover, .overlay .fa-times-circle:hover {
+    opacity: 1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    opacity: 0.5;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+#openLeftPlaylistNav {
+    position: fixed;
+    z-index: 199;
+    top: 0.2%;
+    left: 0.2%;
+    background: none;
+    border: none;
+    border-radius: 100px;
+    height: 38px;
+    width: 38px;
+    font-size: 250%;
+    outline: none;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#openLeftPlaylistNav:hover {
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.fade-in {
+    opacity: 0;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-duration: 800ms;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
